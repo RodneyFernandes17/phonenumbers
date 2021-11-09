@@ -1,22 +1,20 @@
 package com.example.CountryNumbers.entity;
 
-import javax.persistence.Id;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 @Entity
-public class PhoneNumbers {
+public class Customer {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;		
-	@Column(nullable = false)
+	private int id;
 	private String name;
 	private String phone;
 
-	public PhoneNumbers() {
+	public Customer() {
+	}
+
+	public Customer(String name) {
+		this.name = name;
 	}
 
 	public int getId() {
@@ -41,6 +39,11 @@ public class PhoneNumbers {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	@Override
+	public String toString() {
+		return "Country [id=" + id + ", name=" + name + ", phone=" + phone + "]";
 	}
 
 }
