@@ -9,12 +9,15 @@ public class Customer {
 	private int id;
 	private String name;
 	private String phone;
-
-	public Customer() {
+	
+	
+	public Customer(int id, String name, String phone) {
+		this.id = id;
+		this.name = name;
+		this.phone = phone;
 	}
 
-	public Customer(String name) {
-		this.name = name;
+	public Customer() {
 	}
 
 	public int getId() {
@@ -43,7 +46,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Country [id=" + id + ", name=" + name + ", phone=" + phone + "]";
+		return "Customer [id=" + id + ", name=" + name + ", phone=" + phone + "]";
 	}
 
 }
